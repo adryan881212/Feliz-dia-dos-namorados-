@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adryan ❤️ Thamara</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe0ec, #ffd1f3);
+      font-family: 'Segoe UI', sans-serif;
+      color: #8b1c5a;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    .contador {
+      font-size: 3em;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    .frase {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #a52a2a;
+      margin-top: 30px;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #6e2f5b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Adryan ❤️ Thamara</h1>
+  <div class="contador" id="contador"></div>
+  <div class="frase" id="frase"></div>
+  <div class="footer">Desde 21 de maio de 2024</div>
+
+  <script>
+    const dataInicio = new Date("2024-05-21T00:00:00");
+    const hoje = new Date();
+    const diffTime = hoje - dataInicio;
+    const diffDias = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").textContent = `Estamos juntos há ${diffDias} dias 💖`;
+
+    const frases = [
+      "Cada dia ao seu lado é um presente do universo.",
+      "Nosso amor cresce a cada pôr do sol.",
+      "Você é o meu destino favorito.",
+      "Te amo mais a cada batida do meu coração.",
+      "Com você, até o tempo é mais bonito.",
+      "Somos dois corações em um só compasso.",
+      "Te amarei hoje, amanhã e para sempre.",
+      "Você é meu ponto de paz em meio ao mundo.",
+      "Nossa história é escrita com amor todos os dias.",
+      "Amar você é a melhor parte de mim."
+    ];
+    const aleatoria = frases[Math.floor(Math.random() * frases.length)];
+    document.getElementById("frase").textContent = aleatoria;
+  </script>
+</body>
+</html>
